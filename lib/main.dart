@@ -1,6 +1,7 @@
 import 'package:demand_supply/firebase.dart';
 import 'package:demand_supply/homepage.dart';
 import 'package:demand_supply/login.dart';
+import 'package:demand_supply/profile.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,6 +28,7 @@ class _MyAppState extends State<MyApp> {
       ),
       // home: LoginScreen(),
       home: HomePage(),
+      // home: ProfilePage(),
     );
   }
 }
