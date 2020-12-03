@@ -1,5 +1,6 @@
 import 'package:demand_supply/firebase.dart';
 import 'package:demand_supply/login.dart';
+import 'package:demand_supply/profile.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -14,8 +15,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: MediaQuery.of(context).size.height * 0.06,
+        // toolbarHeight: MediaQuery.of(context).size.height * 0.06,
         title: Text("DEMAND&SUPPLY"),
+        centerTitle: true,
         actions: [Icon(Icons.people)],
       ),
       drawer: Drawer(
@@ -146,17 +148,19 @@ class _HomePageState extends State<HomePage> {
             ),
             onPressed: () {
               showModalBottomSheet<void>(
+                  isScrollControlled: true,
                   context: context,
                   builder: (BuildContext context) {
-                    return Container(
-                        child: Padding(
-                            padding: const EdgeInsets.all(32.0),
-                            child: Text(
-                                'This is the modal bottom sheet. Tap anywhere to dismiss.',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Theme.of(context).accentColor,
-                                    fontSize: 24.0))));
+                    return ProfilePage();
+                    // Container(
+                    //     child: Padding(
+                    //         padding: const EdgeInsets.all(32.0),
+                    //         child: Text(
+                    //             'This is the modal bottom sheet. Tap anywhere to dismiss.',
+                    //             textAlign: TextAlign.center,
+                    //             style: TextStyle(
+                    //                 color: Theme.of(context).accentColor,
+                    //                 fontSize: 24.0))));
                   });
             },
           ),
