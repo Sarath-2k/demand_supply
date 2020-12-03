@@ -138,12 +138,6 @@ class ProfilePage extends StatelessWidget {
                                           labelText: 'Locality',
                                         ),
                                       ),
-                                      TextFormField(
-                                        keyboardType: TextInputType.number,
-                                        decoration: InputDecoration(
-                                          labelText: 'PIN Code',
-                                        ),
-                                      ),
                                     ],
                                   ),
                                 ),
